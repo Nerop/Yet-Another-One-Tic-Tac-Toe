@@ -1,0 +1,29 @@
+.board-container
+    margin: 8% 0 0 30%
+.board
+    width: 100%
+    padding: 10px
+
+
+.cell
+    box-shadow:  0 0 10px rgba(0,0,0,0.95)
+    margin: 5px 5px 5px 5px
+    width: 200px
+    height: 200px
+    background-color: white
+    border: 2px solid black
+    color: transparent
+
+.cell::selection
+    color: transparent
+
+.cross
+    background-size: 100% 100%
+    background-image: url('../../img/cross.png')
+
+.circle
+    background-size: 100% 100%
+    background-image: url('../../img/circle.png')
+
+.avoid-events
+    pointer-events: none
