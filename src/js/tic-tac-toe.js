@@ -29,12 +29,12 @@ $(function () {
         $("#" + id + "").css('background-color', 'green');
         $("#" + id1 + "").css('background-color', 'green');
         $("#" + id2 + "").css('background-color', 'green');
-        console.log(id,id1,id2);
         $('.board').addClass('avoid-events');
         alert('Победил ' + winner);
     }
 
     function checkForWinner() {
+        updateVal();
         //horizontal
         if (cell0 !== '' && cell1 !== '' && cell2 !== '' && cell0 === cell1 && cell1 === cell2) {
             winner = cell0;
@@ -68,20 +68,19 @@ $(function () {
     }
 
     $('.cell').click(function (event) {
-        //checkForWinner();
-        updateVal();
+
         console.log(event.target);
         if (step) {
             $(this).html('X');
             $(this).addClass('cross');
             step = false;
-            checkForWinner();
+
         } else if (!step) {
             $(this).html('O');
             $(this).addClass('circle');
             step = true;
-            checkForWinner();
         }
         $(this).addClass('avoid-events');
+        checkForWinner();
     });
 });
