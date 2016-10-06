@@ -30,7 +30,7 @@ $(function () {
         $("#" + id1 + "").css('background-color', 'green');
         $("#" + id2 + "").css('background-color', 'green');
         $('.board').addClass('avoid-events');
-        alert('Победил ' + winner);
+        alert('The winner is ' + winner);
     }
 
     function checkForWinner() {
@@ -68,8 +68,6 @@ $(function () {
     }
 
     $('.cell').click(function (event) {
-
-        console.log(event.target);
         if (step) {
             $(this).html('X');
             $(this).addClass('cross');
